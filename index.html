@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            justify-content:space-around; 
+
+        }
+        .inputs{
+            width: 30%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(7,7,199);
+            align-items: center;
+            border-radius: 30%;
+            height: 50vh;
+            margin-top: 100px;
+
+        }
+        table td{
+            padding: 20px;
+        }
+        ::placeholder{
+            color: black;
+        }
+        .inputs button{
+            width: 100px; 
+            height:30px;
+            background-color:black;
+            color: white;
+            font-size: large;
+            border-radius:20px ;
+        }
+        #profile{
+            width: 30%;
+            height: 70vh;
+            background-color:#e6e6e6;
+            color:rgb(255, 255, 255) ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            border-radius: 30px;
+             border: 5px solid rgb(7, 1, 1);
+        }
+        .profile img{
+            width: 50%;
+            height: 200px;
+            border: 5px solid rgb(148, 148, 148);
+            border-radius:100%;
+        }
+
+        #b1{
+            width:100px;
+            height: 30px;
+            margin-top:100px ;
+            color: rgb(0, 0, 0);
+            font-size: large;
+            border-radius: 10%;
+            border: 2px black solid;
+        }
+        #b2{
+
+            width: 100px;
+            height: 30px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(15, 14, 14);
+            font-size: larger;
+            border-radius: 10%;
+            border:2px black solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="inputs">
+        <h1>Details</h1>
+        <table>
+            <tr>
+                <td>
+                     <input type="text" placeholder="Enter name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Enter url" id="source">
+                </td>
+            </tr>
+          
+            <tr>
+                <td>
+                    <input type="text" placeholder="Enter bio" id="bio">
+                </td>
+            </tr>
+        </table>
+       <button onclick="updateBio()" id="b"><b>Submit</b></button>
+    </div>
+    
+    <div class="profile"  id="profile">
+        <h1>Profile</h1>
+        <h1 id="h1"></h1>
+        <img src="" alt="" id="src">
+        <h1 id="h2"></h1>
+    </div>
+
+    <div>
+        <button onclick="light()" id="b1">Light</button>
+        <button onclick="dark()" id="b2">Dark</button>
+    </div>
+
+    <script>
+        function updateBio(){
+           let Name = document.getElementById("name").value;
+           let img = document.getElementById("source").value;
+           let Source  = document.getElementById("bio").value;
+
+           document.getElementById("h1").innerHTML=Name;
+           document.getElementById('src').src=img;
+           document.getElementById('h2').innerHTML=Source;
+        }
+
+        function dark(){
+      
+            document.getElementById('profile').style.backgroundColor='black';
+            document.getElementById('profile').style.color='white';
+
+        }
+
+        function light(){
+
+            document.getElementById('profile').style.backgroundColor='white';
+            document.getElementById('profile').style.color='black';
+        }
+
+
+
+    </script>
+</body>
+</html>
