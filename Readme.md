@@ -16,11 +16,6 @@ A sleek, responsive web interface that lets users input their name, image URL, a
 - **CSS3** – Flexbox layout, transitions, and theme styling
 - **JavaScript** – DOM manipulation and event handling
 
-## 📸 Demo
-
-![Preview](https://your-demo-image-link.com)  
-*“Na tha batman broooo..!”*
-
 ## 🛠️ How to Use
 
 1. Clone the repository  
